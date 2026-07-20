@@ -8,6 +8,8 @@ pipeline{
     // Define environment variables, 
 environment {
 SCANNER_HOME = tool 'sonar-scanner'
+JAVA_HOME = '/usr/lib/jvm/java-17-openjdk-amd64'
+PATH = "${JAVA_HOME}/bin:${env.PATH}"
 }
 parameters{
     string(name: 'DOCKER_TAG', defaultValue:'latest', description: 'Docker tag')
