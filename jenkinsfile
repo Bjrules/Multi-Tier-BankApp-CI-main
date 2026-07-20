@@ -15,8 +15,7 @@ parameters{
     string(name: 'DOCKER_TAG', defaultValue:'latest', description: 'Docker tag')
 }
     stages{
-
-                Stage to clean the workspace
+             // Stage to clean the workspace
         stage('Clean Workspace') {
             steps {
                     cleanWs() // Clean up previous files
