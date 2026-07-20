@@ -2,7 +2,6 @@ pipeline{
     agent any
 
     tools {
-        jdk 'jdk17' // name must match what you configured in Manage Jenkins → Tools
         maven 'maven3' // name must match what you configured in Manage Jenkins → Tools
     }
     // Define environment variables, 
