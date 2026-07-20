@@ -55,10 +55,10 @@ parameters{
 
          stage('Build Jar'){
             steps {
-                // withMaven(globalMavenSettingsConfig: 'Banjo-maven-Settings', maven: 'maven3', traceability: true) {
-                // }
-                sh 'mvn clean package -DskipTests'
-               // sh "mvn deploy"
+            withMaven(globalMavenSettingsConfig: 'Banjo-maven-Settings', maven: 'maven3', traceability: true) {
+                }
+                //sh 'mvn clean package -DskipTests'
+               sh "mvn deploy"
             }
         }
 
