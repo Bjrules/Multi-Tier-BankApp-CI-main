@@ -16,12 +16,12 @@ parameters{
 }
     stages{
 
-                // Stage to clean the workspace
-        // stage('Clean Workspace') {
-        //     steps {
-        //             cleanWs() // Clean up previous files
-        //         }
-        // }
+                Stage to clean the workspace
+        stage('Clean Workspace') {
+            steps {
+                    cleanWs() // Clean up previous files
+                }
+        }
         stage('Git Checkout'){
             steps {
                 git branch: 'main', credentialsId: 'github-cred', url: 'https://github.com/Bjrules/Multi-Tier-BankApp-CI-main.git'
