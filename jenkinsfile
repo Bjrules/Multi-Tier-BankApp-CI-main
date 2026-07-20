@@ -54,11 +54,11 @@ parameters{
             }
         }
 
-         stage('Build and Publish to Nexus'){
+         stage('Build Jar'){
             steps {
-                withMaven(globalMavenSettingsConfig: 'Banjo-maven-Settings', maven: 'maven3', traceability: true) {
-                     sh "mvn deploy"
-}
+                // withMaven(globalMavenSettingsConfig: 'Banjo-maven-Settings', maven: 'maven3', traceability: true) {
+                // }
+                sh "mvn deploy"
             }
         }
 
